@@ -34,7 +34,7 @@ module.exports.handler = async req => {
 	try {
 		const body = JSON.parse(req.body);
 		const online = body.response_summary === 'Available';
-
+		console.log(body.text);
 		const response = await fetch(DISCORD_WEBHOOK, {
 			body: JSON.stringify({
 				embeds: [
@@ -67,6 +67,7 @@ module.exports.handler = async req => {
 				statusCode: 200
 			};
 		} else {
+			console.log('Discord webhook request failed');
 			return {
 				body: JSON.stringify({
 					message: 'Discord webhook request failed',
@@ -77,6 +78,7 @@ module.exports.handler = async req => {
 		}
 
 	} catch (error) {
+		console.log(error);
 		return {
 			body: JSON.stringify({
 				message: error.toString(),
