@@ -17,7 +17,7 @@
   "homepage": "https://github.com/christmas-countdown/integration#readme",
   "devDependencies": {
     "eslint": "^7.32.0",
-    "netlify": "^8.0.1"
+    "netlify-cli": "^6.9.16"
   },
   "dependencies": {
     "node-fetch": "^3.0.0"

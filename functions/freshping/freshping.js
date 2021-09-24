@@ -6,7 +6,7 @@ const {
 
 module.exports.handler = async req => {
 
-	if (req.query.key !== INCOMING_KEY) {
+	if (req.queryStringParameters.key !== INCOMING_KEY) {
 		return {
 			body: JSON.stringify({
 				message: 'Unauthorised',
