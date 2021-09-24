@@ -1,0 +1,12 @@
+[functions]
+  directory = "functions/"
+
+[[redirects]]
+  from = "/api/*"
+  to = "/.netlify/functions/:splat"
+  status = 200 # rewrite instead of redirect
+  force = false
+
+[template.environment]
+  INCOMING_KEY = "Key to validate incoming requests"
+  DISCORD_WEBHOOK = "Discord webhook URL"
