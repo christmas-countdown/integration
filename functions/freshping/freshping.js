@@ -1,4 +1,4 @@
-const fetch = require('node-fetch');
+const fetch = import('node-fetch');
 const {
 	DISCORD_WEBHOOK,
 	INCOMING_KEY
